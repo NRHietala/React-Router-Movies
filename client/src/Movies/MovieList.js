@@ -7,12 +7,10 @@ export default function MovieList(props) {
   return (
     <div className="movie-list">
       {movies.map(movie => (
-        <Link to="/movies/:id">
         <MovieDetails
         key={movie.id}
         movie={movie}
         />
-        </Link>
       ))}
     </div>
   );
