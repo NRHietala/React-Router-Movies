@@ -12,8 +12,7 @@ export default function App () {
       axios
         .get('http://localhost:5000/api/movies') // Study this endpoint with Postman
         .then(response => {
-          // Study this response with a breakpoint or log statements
-          // and set the response data as the 'movieList' slice of state
+          setMovieList(response)
         })
         .catch(error => {
           console.error('Server Error', error);
@@ -29,8 +28,7 @@ export default function App () {
   return (
     <div>
       <SavedList list={[ /* This is stretch */]} />
-
-      <div>Replace this Div with your Routes</div>
+      <h1>I'm working!</h1>
     </div>
   );
 }
